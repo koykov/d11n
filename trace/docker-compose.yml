@@ -9,6 +9,7 @@ services:
     network_mode: "host"
     restart: always
     volumes:
+      - ./bin:/opt/traced/bin
       - ./config:/opt/traced/config
       - ./logs:/opt/traced/logs
       - ./shell:/opt/traced/shell
@@ -20,6 +21,7 @@ services:
     image: tracedemo
     network_mode: "host"
     volumes:
+      - ./bin:/opt/demo/traceID/bin
       - ./config:/opt/demo/traceID/config
       - ./logs:/opt/demo/traceID/logs
       - ./shell:/opt/demo/traceID/shell

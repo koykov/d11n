@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  demo:
+    build:
+      context: .
+      dockerfile: ./demo.dockerfile
+    image: tracedemo
+    network_mode: "host"
+    volumes:
+      - ./config:/opt/demo/traceID/config
+      - ./logs:/opt/demo/traceID/logs
+      - ./shell:/opt/demo/traceID/shell

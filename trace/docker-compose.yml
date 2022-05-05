@@ -1,6 +1,18 @@
 version: "3"
 
 services:
+  daemon:
+    build:
+      context: .
+      dockerfile: ./daemon.dockerfile
+    image: tracedaemon
+    network_mode: "host"
+    restart: always
+    volumes:
+      - ./config:/opt/traced/config
+      - ./logs:/opt/traced/logs
+      - ./shell:/opt/traced/shell
+
   demo:
     build:
       context: .

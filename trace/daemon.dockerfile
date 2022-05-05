@@ -20,8 +20,8 @@ RUN tar xvzf zeromq-4.2.2.tar.gz
 WORKDIR /tmp/zeromq-4.2.2
 RUN ./configure && make && make install && ldconfig
 
-RUN git clone https://github.com/koykov/demo.git /opt/demo
-RUN ln -s shell/demo.sh /opt/demo/traceID/run.sh
-WORKDIR /opt/demo/traceID
+RUN git clone https://github.com/koykov/traced.git /opt/traced
+RUN ln -s shell/daemon.sh /opt/traced/run.sh
+WORKDIR /opt/traced
 
 CMD /bin/bash ./run.sh

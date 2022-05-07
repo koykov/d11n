@@ -14,6 +14,18 @@ services:
       - ./logs:/opt/traced/logs
       - ./shell:/opt/traced/shell
 
+  ui:
+    build:
+      context: .
+      dockerfile: ./ui.dockerfile
+    image: traceui
+    network_mode: "host"
+    restart: always
+    volumes:
+      - ./config:/opt/ui/config
+      - ./logs:/opt/ui/logs
+      - ./shell:/opt/ui/shell
+
   demo:
     build:
       context: .

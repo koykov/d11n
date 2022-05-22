@@ -31,7 +31,6 @@ services:
       context: .
       dockerfile: ./ui.dockerfile
     image: traceui
-    network_mode: "host"
     restart: always
     ports:
       - "8357:80"

@@ -14,6 +14,18 @@ services:
       - ./logs:/opt/traced/logs
       - ./shell:/opt/traced/shell
 
+  lui:
+    build:
+      context: .
+      dockerfile: ./lui.dockerfile
+    image: traceui
+    network_mode: "host"
+    restart: always
+    volumes:
+      - ./config:/opt/ui/config
+      - ./logs:/opt/ui/logs
+      - ./shell:/opt/ui/shell
+
   ui:
     build:
       context: .
@@ -21,6 +33,8 @@ services:
     image: traceui
     network_mode: "host"
     restart: always
+    ports:
+      - "8357:80"
     volumes:
       - ./config:/opt/ui/config
       - ./logs:/opt/ui/logs

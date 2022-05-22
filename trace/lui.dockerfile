@@ -16,6 +16,4 @@ RUN mkdir dist
 
 RUN ln -s /opt/ui/dist /var/www/html
 
-EXPOSE 8357
-
 CMD /bin/bash ./run.sh

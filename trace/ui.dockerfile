@@ -2,6 +2,7 @@ FROM ubuntu:22.04
 
 RUN apt-get update
 RUN apt-get install -y software-properties-common
+RUN add-apt-repository -y ppa:maxmind/ppa
 RUN apt-get update --fix-missing
 RUN apt-get install -y gcc curl openssl libtool pkg-config build-essential git npm nginx
 

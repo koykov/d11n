@@ -14,6 +14,7 @@ RUN mkdir dist
 
 RUN ln -s /opt/ui/config/ui.nginx.conf /etc/nginx/sites-available/trace
 RUN ln -s /etc/nginx/sites-available/trace /etc/nginx/sites-enabled/trace
+RUN rm -f /etc/nginx/sites-enabled/default
 
 RUN ln -s /opt/ui/dist /var/www/trace
 

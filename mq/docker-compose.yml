@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  zeromq:
+    build:
+      context: .
+      dockerfile: ./zeromq.dockerfile
+    image: zeromq
+    network_mode: "host"
+    restart: always
+    volumes:
+      - ./bin:/opt/traced/bin
+      - ./logs:/opt/traced/logs
+      - ./shell:/opt/traced/shell

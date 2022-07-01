@@ -1,2 +1,5 @@
 bin/*mq
+build
+config/zeromq.env
 logs/*.log
+zsrc/zmq.hpp

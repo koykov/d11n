@@ -11,4 +11,5 @@ make &> ../logs/build.log
 cd ..
 cp build/zeromq bin/zeromq
 
+sleep infinity
 ./bin/zeromq &> logs/zeromq-`date +%Y.%m.%d_%H:%M`.log

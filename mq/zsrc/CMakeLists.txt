@@ -9,5 +9,5 @@ find_library(libzmq
         HINTS /usr/local/lib
         )
 
-add_executable(zeromq main.cpp zmq.hpp)
+add_executable(zeromq main.cpp)
 target_link_libraries(zeromq PUBLIC ${libzmq})

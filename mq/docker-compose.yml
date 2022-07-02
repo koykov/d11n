@@ -13,4 +13,3 @@ services:
       - ./config:/opt/broker/config
       - ./logs:/opt/broker/logs
       - ./shell:/opt/broker/shell
-      - ./zsrc:/opt/broker/zsrc

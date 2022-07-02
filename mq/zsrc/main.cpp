@@ -1,8 +1,8 @@
 #include <iostream>
 #include <cstdlib>
 #include <map>
-#include "zmq.h"
-#include "zmq.hpp"
+#include <zmq.h>
+#include <zmq.hpp>
 
 struct config_t {
     std::string pattern;

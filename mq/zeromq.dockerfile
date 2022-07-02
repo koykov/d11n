@@ -14,7 +14,7 @@ RUN ./configure && make && make install && ldconfig
 
 RUN git clone https://github.com/koykov/d11n.git /opt/d11n
 RUN ln -s /opt/d11n/mq /opt/broker
-RUN cd /opt/broker
+WORKDIR /opt/broker
 RUN wget -O zsrc/zmq.hpp https://raw.githubusercontent.com/zeromq/cppzmq/master/zmq.hpp
 
 RUN ln -s shell/zeromq.sh run.sh

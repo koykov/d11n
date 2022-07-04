@@ -12,3 +12,6 @@ cd ..
 cp build/zeromq bin/zeromq
 
 ./bin/zeromq &> logs/zeromq-`date +%Y.%m.%d_%H:%M`.log
+
+# todo remove me after debug
+sleep infinity

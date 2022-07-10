@@ -1,5 +1,5 @@
 bin/*mq
 build
-config/zeromq.env
+config/zeromq.json
 logs/*.log
 zsrc/zmq.hpp

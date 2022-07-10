@@ -9,9 +9,6 @@ cd build
 cmake .. &> ../logs/cbuild.log
 make &> ../logs/build.log
 cd ..
-cp build/zeromq bin/zeromq
+cp build/zmqbroker bin/zeromq
 
 ./bin/zeromq config/zeromq.json &> logs/zeromq-`date +%Y.%m.%d_%H:%M`.log
-
-# todo remove me after debug
-sleep infinity

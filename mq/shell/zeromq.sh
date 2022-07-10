@@ -6,7 +6,7 @@ rm -rf build
 mkdir -p build
 cd build
 
-cmake ../zsrc &> ../logs/cbuild.log
+cmake .. &> ../logs/cbuild.log
 make &> ../logs/build.log
 cd ..
 cp build/zeromq bin/zeromq

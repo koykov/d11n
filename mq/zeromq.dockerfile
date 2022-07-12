@@ -4,7 +4,15 @@ RUN apt-get update
 RUN apt-get install -y software-properties-common
 RUN add-apt-repository -y ppa:maxmind/ppa
 RUN apt-get update -
-RUN apt-get install -y gcc libtool pkg-config build-essential autoconf automake wget git cmake libzmq3-dev openssh-server
+RUN apt-get install -y gcc libtool pkg-config build-essential autoconf automake wget git cmake openssh-server
+
+WORKDIR /tmp
+RUN wget https://github.com/zeromq/libzmq/releases/download/v4.2.2/zeromq-4.2.2.tar.gz
+RUN tar xvzf zeromq-4.2.2.tar.gz
+WORKDIR /tmp/zeromq-4.2.2
+RUN ./configure
+RUN && make && make install
+RUN dconfig
 
 WORKDIR /tmp
 RUN wget https://boostorg.jfrog.io/artifactory/main/release/1.76.0/source/boost_1_76_0.tar.gz

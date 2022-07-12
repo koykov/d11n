@@ -11,7 +11,7 @@ RUN wget https://github.com/zeromq/libzmq/releases/download/v4.2.2/zeromq-4.2.2.
 RUN tar xvzf zeromq-4.2.2.tar.gz
 WORKDIR /tmp/zeromq-4.2.2
 RUN ./configure
-RUN && make && make install
+RUN make && make install
 RUN dconfig
 
 WORKDIR /tmp

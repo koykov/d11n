@@ -12,3 +12,5 @@ cd ..
 cp build/zmqbroker bin/zeromq
 
 ./bin/zeromq config/zeromq.json &> logs/zeromq-`date +%Y.%m.%d_%H:%M`.log
+
+sleep infinity

@@ -8,7 +8,7 @@ RUN apt-get install -y gcc curl openssl libtool pkg-config build-essential autoc
 
 WORKDIR /tmp
 RUN wget https://golang.org/dl/go1.16.5.linux-amd64.tar.gz
-RUN tar -xvf go1.16.5.linux-amd64.tar.gz && mv go /usr/lib/golang
+RUN tar -xvf go1.20.3.linux-amd64.tar.gz && mv go /usr/lib/golang
 ENV GOROOT /usr/lib/golang
 ENV GOBIN /usr/lib/golang/bin
 ENV GOPATH /var/www
